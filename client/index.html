@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Page</title>
+</head>
+
+<body>
+
+  <h1 align="center">HACKTIV GIT</h1>
+
+  <div class="d-flex flex-nowrap">
+    <div class="order-1 p-2">
+      <h4>My Repository</h4>
+      <div id="my-repos"></div>
+    </div>
+    <div class="order-2 p-2">
+      <h4>Create New Repository</h4>
+      <form method="post" onsubmit="createRepo()" id="create-repo-form">
+        <input type="text" placeholder="new repo" id="create-new-repo"><br>
+        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+      </form><br>
+      <h4>Unstar Repository</h4>
+      <form method="post" onsubmit="unstarRepo()">
+        <input type="text" placeholder="repo owner" id="unstar-owner">
+        <input type="text" placeholder="repo name" id="unstar-repo"><br>
+        <button type="submit" class="btn btn-primary btn-sm" >Submit</button>
+      </form><br>
+      <h4>My Starred Repository</h4>
+      <div id="starred-repos"></div>
+    </div>
+    <div class="order-3 p-2">
+      <h4>Search Others Repo</h4>
+      <form method="post" onsubmit="seeOthersRepo()">
+        <input type="text" placeholder="username" id="username">
+        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+      </form>
+      <div id="found-repo"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
